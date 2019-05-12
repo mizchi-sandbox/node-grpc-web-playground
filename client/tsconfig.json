@@ -1,4 +1,5 @@
 {
+  "exclude": ["src/gen"],
   "compilerOptions": {
     /* Basic Options */
     "jsx": "react",

@@ -8,11 +8,12 @@ services:
       - "server"
   server:
     build:
-      dockerfile: ./server-node/Dockerfile
+      dockerfile: ./server/Dockerfile
       context: ./
     volumes:
-      - node_modules:/app/node_modules:rw
+      - server_node_modules:/app/node_modules:rw
     ports:
       - "9090:9090"
 volumes:
-  node_modules:
+  server_node_modules:
+  client_node_modules:

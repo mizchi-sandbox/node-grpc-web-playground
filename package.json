@@ -1,0 +1,13 @@
+{
+  "name": "hello-grpc-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:otanu/hello-grpc-web.git",
+  "author": "mizchi <miz404@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "google-protobuf": "^3.8.0-rc.1",
+    "protoc-gen-grpc-web": "^1.0.5",
+    "ts-protoc-gen": "^0.9.0"
+  }
+}

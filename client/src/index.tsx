@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import ReactDOM from "react-dom";
-import { HelloRequest } from "./helloworld/helloworld_pb";
-import { GreeterClient } from "./helloworld/HelloworldServiceClientPb";
+import { HelloRequest } from "./gen/protocol/helloworld_pb";
+import { GreeterClient } from "./gen/protocol/HelloworldServiceClientPb";
 
 type State = {
   inputText: string;
