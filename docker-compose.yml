@@ -1,24 +1,30 @@
 version: "3"
 services:
+  front:
+    build:
+      context: ./nginx
+    image: nginx
+    ports:
+      - "80:8080"
+    volumes:
+      - ./client/dist:/wwwroot:ro
   proxy:
     build: ./proxy
     ports:
       - "8080:8080"
     links:
       - "server"
-
   server:
     build: ./server
     volumes:
       - ./server/:/go/src/hello-grpc-web/server
     ports:
       - "9090:9090"
-    container_name: "server"
-
-  client:
-    build: ./client
-    volumes:
-      - ./client/src:/client/src
-      - ./client/public:/client/public
-    ports:
-      - "3000:3000"
+  # client:
+  #   build: ./client
+  #   volumes:
+  #     - ./client/src:/client/src
+  #     - ./client/dist:/client/dist
+  #     - ./client/.cache:/client/.cache
+  #   ports:
+  #     - "3000:3000"

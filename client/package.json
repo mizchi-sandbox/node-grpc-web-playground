@@ -2,24 +2,21 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "google-protobuf": "^3.6.1",
-    "grpc-web": "^1.0.0",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-scripts-ts": "3.1.0"
-  },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "start": "parcel src/index.html --port 3000"
+  },
+  "dependencies": {
+    "google-protobuf": "^3.8.0-rc.1",
+    "grpc-web": "^1.0.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.9",
-    "@types/node": "^10.12.1",
-    "@types/react": "^16.4.18",
-    "@types/react-dom": "^16.0.9",
-    "typescript": "^3.1.4"
+    "@types/jest": "^24.0.12",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.4.5"
   }
 }
