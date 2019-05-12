@@ -1,18 +1,14 @@
 FROM node:alpine
 
 RUN apk add --no-cache tini yarn
-
 WORKDIR /app
-# RUN chown -R node /app
-
-USER node
-
 ENTRYPOINT ["/sbin/tini", "--"]
 
-COPY package.json yarn.lock ./
+COPY ./server-node/package.json ./server-node/yarn.lock ./
 
 RUN yarn install
-COPY . .
+COPY ./server-node .
+COPY protocol /protocol
 
 EXPOSE 9090
-CMD [ "npm", "start" ]
+CMD [ "yarn", "start" ]

@@ -1,18 +1,3 @@
-// const path = require("path");
-// const grpc = require("grpc");
-
-// const PROTO_PATH = path.join(__dirname, "../protocol/helloworld.proto");
-// const { helloworld } = grpc.load(PROTO_PATH);
-
-// function sayHello(call, callback) {
-//   callback(null, { message: "Hello " + call.request.name });
-// }
-
-// const server = new grpc.Server();
-// server.addService(helloworld.Greeter.service, { sayHello });
-// server.bind("0.0.0.0:9090", grpc.ServerCredentials.createInsecure());
-// server.start();
-
 const path = require("path");
 const grpc = require("grpc");
 const protoLoader = require("@grpc/proto-loader");
