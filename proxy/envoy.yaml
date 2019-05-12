@@ -17,7 +17,7 @@ static_resources:
                 route_config:
                   name: local_route
                   virtual_hosts:
-                    - name: local_service
+                    - name: local_servic
                       domains: ["*"]
                       routes:
                         - match: { prefix: "/" }

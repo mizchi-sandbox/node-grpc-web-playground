@@ -12,6 +12,12 @@ services:
       - ./server/:/go/src/hello-grpc-web/server
     ports:
       - "9090:9090"
+  # server-node:
+  #   build: ./server-node
+  #   volumes:
+  #     - node_modules:./server-node/node_modules:rw
+  #   ports:
+  #     - "9090:9090"
   # client:
   #   build: ./client
   #   volumes:
@@ -20,3 +26,5 @@ services:
   #     - ./client/.cache:/client/.cache
   #   ports:
   #     - "3000:3000"
+# volumes:
+#   node_modules:
