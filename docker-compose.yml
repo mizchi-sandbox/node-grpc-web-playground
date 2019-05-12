@@ -1,13 +1,5 @@
 version: "3"
 services:
-  front:
-    build:
-      context: ./nginx
-    image: nginx
-    ports:
-      - "80:8080"
-    volumes:
-      - ./client/dist:/wwwroot:ro
   proxy:
     build: ./proxy
     ports:
